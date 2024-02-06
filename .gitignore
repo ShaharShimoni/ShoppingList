@@ -1,0 +1,12 @@
+/*/node_modules/
+
+# Build Folders
+[Bb]in/
+[Oo]bj/
+[Ll]ogs/
+
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates

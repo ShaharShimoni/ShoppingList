@@ -5,7 +5,6 @@ export const fetchCategories = async () => {
       throw new Error("Error in network response");
     }
     const data = await response.json();
-    console.log(data); // Log the actual data, not the Promise
     return data;
   } catch (error) {
     console.error("Error fetching data:", error.message);
@@ -13,7 +12,6 @@ export const fetchCategories = async () => {
 };
 
 export const saveOrder = async (name, email, address, products) => {
-  console.log(JSON.stringify({ name, email, address, products }));
   try {
     const response = await fetch("http://localhost:5207/api/orders", {
       method: "POST",

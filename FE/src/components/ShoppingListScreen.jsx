@@ -34,7 +34,7 @@ export default function ShoppingListScreen() {
   );
 
   function onAddProductClick() {
-    if (category !== "" && product !== "")
+    if (category && product)
       dispatch(addProduct({ category: category, item: product }));
   }
 

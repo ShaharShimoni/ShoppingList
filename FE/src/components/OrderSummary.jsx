@@ -28,6 +28,11 @@ const OrderSummary = () => {
     return productList;
   };
 
+  const isValidEmail = (email) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
+
   return (
     <div className={classes.root}>
       <h1 className={classes.title}>סיכום הזמנה</h1>
@@ -58,7 +63,7 @@ const OrderSummary = () => {
         />
         <TextField
           autoComplete="off"
-          error={buttonClicked && email === ""}
+          error={buttonClicked && !isValidEmail(email)}
           required
           id="outlined-required"
           placeholder="מייל"

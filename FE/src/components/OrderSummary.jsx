@@ -8,7 +8,7 @@ const OrderSummary = () => {
   const classes = useStyles();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [adress, setAdress] = useState("");
+  const [address, setAddress] = useState("");
   const [buttonClicked, setButtonClicked] = useState(false);
   const products = useSelector((state) => state.products.categories);
   const isEmpty = !products || Object.keys(products).length === 0;
@@ -46,14 +46,14 @@ const OrderSummary = () => {
         />
         <TextField
           autoComplete="off"
-          error={buttonClicked && adress === ""}
+          error={buttonClicked && address === ""}
           required
           id="outlined-required"
           placeholder="כתובת מלאה"
           InputLabelProps={{ shrink: true }}
           style={{ marginLeft: "5%" }}
           onChange={(e) => {
-            setAdress(e.target.value);
+            setAddress(e.target.value);
           }}
         />
         <TextField
@@ -91,7 +91,9 @@ const OrderSummary = () => {
           size="large"
           onClick={async () => {
             setButtonClicked(true);
-            await saveOrder(name, email, adress, products);
+            if (email && name && address) {
+              await saveOrder(name, email, address, products);
+            }
           }}>
           אשר הזמנה
         </Button>

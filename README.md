@@ -11,16 +11,18 @@ DB on cloud, there is no need to connect and set it up locally. <br /> <br />
 Fisrt screen:
 <br />
 <br />
-<img width="600" alt="image" src="https://github.com/ShaharShimoni/ShoppingList/assets/57682267/b527194c-8d2b-47fb-8bda-4ad5617bbc2e">  <br />
+<img width="952" alt="image" src="https://github.com/ShaharShimoni/ShoppingListFix/assets/57682267/78837bbc-7ec1-4184-944b-c4ecb2f06ffe">
+<br />
+<br />
 On phone: 
 <br />
 <br />
-<img width="218" alt="image" src="https://github.com/ShaharShimoni/ShoppingListFix/assets/57682267/42829065-24aa-417a-abee-ef9a14b796bb">
+<img width="223" alt="image" src="https://github.com/ShaharShimoni/ShoppingListFix/assets/57682267/d49e1996-51ab-4942-9952-2a101c5dd213">
 <br />
 <br />
 On second screen when clicking on confirm order button, <br />
 order is being saved on DB. <br /> <br />
-<img width="600" alt="image" src="https://github.com/ShaharShimoni/ShoppingList/assets/57682267/6e3f6762-5eb3-49f3-ba22-4998f53b84b7">
+<img width="957" alt="image" src="https://github.com/ShaharShimoni/ShoppingListFix/assets/57682267/356c7014-325f-4526-b04e-2a3f34fd48b6">
 <br />
 On phone:
 <br />

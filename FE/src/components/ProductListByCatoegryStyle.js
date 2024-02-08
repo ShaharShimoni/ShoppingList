@@ -5,26 +5,26 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "smaller",
     marginRight: "10px",
   },
-  trash: {
-    marginRight: "10px",
+  trashIconWrapper: {
+    width: "30px",
+    height: "30px",
+    display: "inline-block",
   },
   item: {
     fontSize: "smaller",
     overflow: "hidden",
     textOverflow: "ellipsis",
-    maxWidth: "30vh",
+    maxWidth: "15vh",
   },
   box: {
     color: "black",
     display: "flex",
-    justifyContent: "center",
     maxHeight: "10vh",
   },
   list: {
     overflow: "auto",
     overflowX: "hidden",
     maxHeight: "25vh",
-    paddingLeft: "5%",
   },
   categoryBox: {
     marginRight: "100px",

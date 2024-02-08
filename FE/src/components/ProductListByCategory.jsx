@@ -25,22 +25,23 @@ const ProductListByCategory = () => {
             <div className={classes.list}>
               {categories[category].map((product, itemIndex) => (
                 <div key={itemIndex} className={classes.box}>
+                  <div className={classes.trashIconWrapper}>
+                    <Trash
+                      size={20}
+                      onClick={() => {
+                        dispatch(
+                          removeProduct({
+                            category: category,
+                            item: product.item,
+                          })
+                        );
+                      }}
+                    />
+                  </div>
                   <span className={classes.item}>{product.item}</span>
                   {product.count > 1 && (
                     <span className={classes.count}>({product.count})</span>
                   )}
-                  <Trash
-                    size={20}
-                    className={classes.trash}
-                    onClick={() => {
-                      dispatch(
-                        removeProduct({
-                          category: category,
-                          item: product.item,
-                        })
-                      );
-                    }}
-                  />
                 </div>
               ))}
             </div>

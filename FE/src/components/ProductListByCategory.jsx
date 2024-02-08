@@ -28,6 +28,7 @@ const ProductListByCategory = () => {
                   <div className={classes.trashIconWrapper}>
                     <Trash
                       size={20}
+                      className={classes.trashIcon}
                       onClick={() => {
                         dispatch(
                           removeProduct({

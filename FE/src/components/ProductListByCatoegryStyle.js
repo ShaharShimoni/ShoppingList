@@ -10,6 +10,12 @@ const useStyles = makeStyles((theme) => ({
     height: "30px",
     display: "inline-block",
   },
+  trashIcon: {
+    "&:hover": {
+      color: "red",
+      cursor: "pointer",
+    },
+  },
   item: {
     fontSize: "smaller",
     overflow: "hidden",

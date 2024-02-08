@@ -5,6 +5,9 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "smaller",
     marginRight: "10px",
   },
+  trash: {
+    marginRight: "10px",
+  },
   item: {
     fontSize: "smaller",
     overflow: "hidden",

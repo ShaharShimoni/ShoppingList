@@ -1,9 +1,12 @@
 import React from "react";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import useStyles from "./ProductListByCatoegryStyle";
+import { Trash } from "react-bootstrap-icons";
+import { removeProduct } from "../app/features/productsSlice";
 
 const ProductListByCategory = () => {
   const classes = useStyles();
+  const dispatch = useDispatch();
   const categories = useSelector((state) => state.products.categories);
 
   return (
@@ -26,6 +29,18 @@ const ProductListByCategory = () => {
                   {product.count > 1 && (
                     <span className={classes.count}>({product.count})</span>
                   )}
+                  <Trash
+                    size={20}
+                    className={classes.trash}
+                    onClick={() => {
+                      dispatch(
+                        removeProduct({
+                          category: category,
+                          item: product.item,
+                        })
+                      );
+                    }}
+                  />
                 </div>
               ))}
             </div>

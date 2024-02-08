@@ -26,13 +26,20 @@ const productsSlice = createSlice({
 
     removeProduct: (state, action) => {
       const { category, item } = action.payload;
-
-      state.categories[category] = state.categories[category].filter(
-        (existingItem) => existingItem.item !== item
-      );
-
-      if (state.categories[category].length === 0) {
-        delete state.categories[category];
+      if (state.categories.hasOwnProperty(category)) {
+        const index = state.categories[category].findIndex(
+          (existingItem) => existingItem.item === item
+        );
+        if (index !== -1) {
+          if (state.categories[category][index].count === 1) {
+            state.categories[category].splice(index, 1);
+          } else {
+            state.categories[category][index].count--;
+          }
+          if (state.categories[category].length === 0) {
+            delete state.categories[category];
+          }
+        }
       }
     },
   },
